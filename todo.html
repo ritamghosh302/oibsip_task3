@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <h1>To-Do App</h1>
+    <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+        <input type="datetime-local" id="dueDateTime" title="Due Date and Time">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <button class="clear-button" onclick="clearAllData()">Clear All Data</button>
+
+    <div class="task-list">
+        <h2>Pending Tasks</h2>
+        <button class="sort-button" onclick="toggleSort()">Sort by: <span id="sortLabel">Newest First</span></button>
+        <ul id="pendingTasks"></ul>
+    </div>
+
+    <div class="task-list">
+        <h2>Completed Tasks</h2>
+        <ul id="completedTasks"></ul>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
